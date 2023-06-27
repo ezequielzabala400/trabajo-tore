@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vin</title>
     <link rel="stylesheet" href="./assets/styles.css">
-    <link rel="stylesheet" href="assets/mediaqueries.css">
+    <!-- <link rel="stylesheet" href="assets/mediaqueries.css"> -->
+    <link rel="stylesheet" href="./assets/newMedia.css">
+    <link rel="shortcut icon" href="./assets/img/logosinfondo.jpg" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -23,9 +25,11 @@
             </label>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <ul class="toggle">
-                <li><a href="index-inicio.html" target="_blank">Mi cuenta</a></li>
+                <!-- <li><a href="#">Mi cuenta</a></li>
                 <li><a href="#">Carrito</a></li>
-                <li><a href="#">Finalizar compra</a></li>
+                <li><a href="#">Finalizar compra</a></li> -->
+                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="#">Registrarse</a></li>
             </ul>
         </div>
         <a href="#"><img src="./assets/img/carrito.png" alt="carrito de Compras" class="carrito"></a>
@@ -33,6 +37,7 @@
 </header>
 <main>
     <section class="about">
+        <div class="overlay"></div>
         <div class="container">
             <div class="info">
                 <h1>Compra desde la <strong>comodidad de tu </strong>casa</h1>
@@ -45,9 +50,9 @@
             <div class="img-container">
                 <img src="./assets/img/remera blanca.webp" alt="buzo blend">
             </div>
-            <strong>$5.000</strong>
-            <p>Remera blanca</p>
-            <a href="#"><span>Añadir al carrito</span></a>
+            <h3>Remera blanca</h3>
+            <strong>Precio: $5.000</strong>
+            <button>Añadir al carrito</button>
             
 
         </div>
@@ -55,9 +60,9 @@
             <div class="img-container">
                 <img src="./assets/img/campera-urbana.jpg" alt="campera urbana">
             </div>
-            <strong>$42.000</strong>
-            <p>Campera urbana</p>
-            <a href="#"><span>Añadir al carrito</span></a>
+            <h3>Campera urbana</h3>
+            <strong>Precio: $42.000</strong>
+            <button>Añadir al carrito</button>
             
 
         </div>
@@ -65,9 +70,9 @@
             <div class="img-container">
                 <img src="./assets/img/campera-de-cuero-de-oveja.jpg" alt="Campera de cuero de oveja">
             </div>
-            <strong>$50.000</strong>
-            <p>Campera de cuero de oveja</p>
-            <a href="#"><span>Añadir al carrito</span></a>
+            <h3>Campera de cuero de oveja</h3>
+            <strong>Precio: $50.000</strong>
+            <button>Añadir al carrito</button>
             
         </div>
     </section>

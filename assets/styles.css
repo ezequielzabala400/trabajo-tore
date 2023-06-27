@@ -23,6 +23,7 @@ header{
     height: 60px;
     position: sticky;
     top: 0;
+    z-index: 50;
 }
 .logo{
     height: 60px;
@@ -43,6 +44,11 @@ header{
     display: none;
     
 }
+
+.menu-label{
+    cursor: pointer;
+}
+
 .toggle{
     display: none;
     text-align: center;
@@ -100,94 +106,129 @@ main{
 .about{
     background-image: url(img/portada01.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     max-width: 1200px;
+    margin: 30px auto;
     height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 2%;
+    position: relative;
+
 }
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.3;
+    filter: brightness(0.1);
+}
+
 .container{
-    width: 40%;
     display: flex;
     align-items: center;
     padding: 0 40px 0 20px;
+    z-index: 1;
 }
 .info{
     color: rgba(255,255,255,1);
     font-size: 32px;
     font-weight: 700;
+    width: 500px;
 }
 .info strong{
-    color: black;
+    color: bisque;
 }
 .productos{
+    margin-top: 70px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 16px;
 }
 .product-cards{
-    background-color:rgba(255,255,255,1) ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color:rgb(0, 0, 0) ;
     border-radius: 10px;
     border-color: black;
-    padding: 30px 0 30px 40px;
-    width: 33%;
-    gap: 70px;
+    gap: 10px;
+    padding: 16px;
+    /* gap: 70px; */
+    width: 500px;
 }
-.product-cards a{
+.product-cards button{
     display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
+    /* margin-top: 20px; */
     background-color: black;
-    border: 7px solid black;
+    border: 5px solid rgb(255, 255, 255);
     color: rgba(255,255,255,1);
+    border-radius: 10px;
     padding: 15px;
     transition: background-color 0.4s,color 0.4s;
+    cursor: pointer;
+    align-self: flex-end;
 }
-.product-cards a:hover{
+.product-cards button:hover{
     color: black;
     background-color: rgba(255,255,255,1);
     transition: background-color 0.4s,color 0.4s;
 }
 .product-cards strong{
     font-weight: 700;
-    font-size: 18px;
-}
-.product-cards p{
     font-size: 16px;
-    font-weight: 400;
+    color: white;
+    padding-left: 20px;
 }
-.img-container img{
-    width: 80%;
-    height: 60vh;
-    transition: all 0,5s;
-}
-.img-container{
-    overflow: hidden;
+.product-cards h3{
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
 }
 
+.img-container{
+    width: 100%;
+    height: 400px;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    border-radius: 10px;
+    /* transition: all 0.5s; */
+}
+
+
 .about-us{
-    padding: 70px 0px;
+    padding: 70px 16px;
     max-width: 1200px;
-    margin: 65px auto;
+    margin: 105px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .container-about{
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 .about-us-info{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 70%;
-    margin: 1%;
+    /* width: 70%; */
+    /* margin: 1%; */
 }
 .about-us-info h1 {
     font-size: 50px;
@@ -195,13 +236,15 @@ main{
 }
 .about-us-info p {
     font-size: 16px;
-    width: 70%;
-    line-height: 20px;
+    /* width: 70%; */
+    max-width: 500px;
+    line-height: 24px;
 }
 .about-us-img{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     border-radius: 6px;
-    margin: 1%;
+    /* margin: 1%; */
 }
 .contact{
     max-width: 1200px;
@@ -216,28 +259,40 @@ main{
     align-items: center;
     
 }
+
+.container-contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .container-contact iframe{
     border-radius: 7px;
 }
 footer{
+    margin-top: 40px;
     width: 100%;
     background-color: bisque;
-    flex-wrap: wrap;
-    padding: 2%;
+    /* flex-wrap: wrap; */
+    padding: 10px;
 }
 .footer-container{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 10px;
     gap: 70px;
+    max-width: 1200px;
+    margin: auto;
 }
 .footer-links{
-    width: 35%;
+    width: 330px;
 }
 .footer-links ul li a {
     font-size: 1rem ;
     text-decoration: none;
-    display: block;
+    display: inline;
     color: black;
 }
 .footer-links a:hover{
@@ -253,6 +308,7 @@ footer{
 }
 
 .footer-container img{
+    width: 230px;
     border-radius: 20px;
 }
 
