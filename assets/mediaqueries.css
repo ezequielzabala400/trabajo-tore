@@ -29,9 +29,25 @@
 }
 @media(max-width: 425px){
     .productos{
+        flex-direction: column;
     }
     .product-cards{
         width: 100%;
+    }
+    .container-contact{
+        flex-direction: column-reverse;
+    }
+    .container-contact iframe{
+        width: 70%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+    .container-contact ul{
+        margin-bottom: 20px;
+    }
+    .about{
+        width: 400px;
+        height: 500px;
     }
 
 
